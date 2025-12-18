@@ -294,7 +294,6 @@ footer .autoria p{
     }
 
     .banner .bgVideo {
-        transform: none !important;
         width: 100%;
         height: 100%;
         object-fit: cover;
