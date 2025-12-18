@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0px;
@@ -8,8 +9,8 @@
 }
 
 body {
+    overflow-x: hidden;
     font-family: "Nunito Sans", sans-serif;
-    
     background-color: rgb(28, 28, 28);
 }
 
@@ -127,7 +128,8 @@ div.compre {
 
 div.compre a{
     font-size: 1.2em;
-    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
     margin: 10px;
     text-decoration: none;
     color: rgb(97, 8, 251);
@@ -212,8 +214,199 @@ div.bonus p {
     font-weight: 700;
 }
 
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px;
+}
+
+footer .autoria p{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+    color: white;
+}
+
+.autoria a {
+    text-decoration: none;
+    color: rgb(52, 250, 230);
+    font-weight: 700;
+}
+
+.autoria a:hover {
+    color: aquamarine;
+}
+
+/*PARA CELULAR*/
+
 @media (max-width: 768px) {
+
+    /* segurança contra overflow */
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
+        padding: 20px;
+        z-index: 10;
+
+        background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.8),
+            rgba(0,0,0,0)
+        );
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .redes {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* banner */
+    .banner {
+        width: 100%;
+        padding-top: 120px;
+    }
+
     .banner .bgVideo {
         transform: none !important;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* container principal */
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    div.content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .title img {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    div.compre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    div.compre a {
+        font-size: 1em;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        margin: 8px 0;
+        text-decoration: none;
+        color: rgb(97, 8, 251);
+        background-color: white;
+        padding: 12px 20px;
+        border-radius: 40px;
+        transition: .5s;
+        width: 100%;
+        max-width: 260px;
+    }
+
+    div.personagem img {
+        width: 100%;
+        max-width: 360px;
+        margin-top: 20px;
+    }
+
+    /* artigos e textos */
+    article {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    section#sobre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    div.text {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .text p {
+        text-align: justify;
+        font-size: 0.95em;
+        line-height: 1.6;
+    }
+
+    /* poster */
+    .poster {
+        width: 100%;
+        max-width: 420px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    div.poster img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin: 0;
+        display: block;
+    }
+
+    footer {
+        height: 50vh;
+        width: 100vw;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 30px;
+        padding-bottom: 50px;
     }
 }
